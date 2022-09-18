@@ -1,0 +1,688 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap");
+
+body {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nanum Pen Script";
+  min-height: 100vh;
+  margin: 0px;
+}
+/* 650 */
+@media (min-width: 650px) {
+  .App {
+    width: 640px;
+  }
+}
+
+@media (max-witdh: 650px) {
+  .App {
+    width: 90vw;
+  }
+}
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.App {
+  min-height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* MyButton */
+.MyButton {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-size: 18px;
+  /* 버튼 안의 글자가 짤려서 2줄이 되지 않게 해주는 속성 */
+  white-space: nowrap;
+
+  font-family: "Nanum Pen Script";
+}
+
+.MyButton_default {
+  background-color: #ececec;
+  color: black;
+}
+
+.MyButton_positive {
+  background-color: #64c964;
+  color: white;
+}
+
+.MyButton_negative {
+  background-color: #fd565f;
+  color: white;
+}
+
+.MyButton_menu {
+  background-color: #ececec;
+  color: black;
+  font-size: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+row1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+row2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* HEADER */
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  /* 가로축으로 정렬 */
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+header > div {
+  display: flex;
+}
+
+header .head_text {
+  width: 50%;
+  font-size: 30px;
+  justify-content: center;
+}
+
+header .head_btn_left {
+  width: 25%;
+  justify-content: start;
+}
+header .head_btn_right {
+  width: 25%;
+  justify-content: end;
+}
+
+header button {
+  font-family: "Nanum Pen Script";
+}
+
+.scg_img {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* opacity: 0.05; */
+}
+menu {
+  font-size: 100px;
+}
+
+/* RegistryEditor 날짜 시간 */
+
+.RegistryEditor h4 {
+  font-size: 25px;
+}
+
+.RegistryEditor section {
+  margin-bottom: 40px;
+  display: flex;
+}
+.RegistryEditor .input_date {
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  margin-right: 10px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+
+  font-family: "Nanum Pen Script";
+  font-size: 25px;
+}
+.RegistryEditor .input_time {
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  margin-left: 10px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+
+  font-family: "Nanum Pen Script";
+  font-size: 25px;
+}
+
+/* 예약 인원 */
+.RegistryEditor .number_of_people {
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+
+  font-family: "Nanum Pen Script";
+  font-size: 25px;
+}
+
+/* 예약 지역 */
+.RegistryEditor .location_si {
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  margin-right: 10px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+
+  font-family: "Nanum Pen Script";
+  font-size: 25px;
+}
+
+.RegistryEditor .location_gu {
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  margin-right: 10px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+
+  font-family: "Nanum Pen Script";
+  font-size: 25px;
+}
+
+.RegistryEditor .location_dong {
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  margin-right: 10px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+
+  font-family: "Nanum Pen Script";
+  font-size: 25px;
+}
+
+.RegistryEditor textarea {
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.registry_btn1 {
+  margin-right: 10px;
+}
+
+/* home main icons group */
+.main_icon_group {
+  display: flex;
+  align-items: center;
+}
+
+.btn_image {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+}
+
+/* MyReservationList styling */
+.menu_warpper {
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.MyReservationList .reservation_registry button {
+  margin-top: 20px;
+}
+
+.ControlMenu {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  cursor: pointer;
+  font-family: "Nanum Pen Script";
+  font-size: 18px;
+}
+
+/* ReservationItem styling */
+.ReservationItem {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #e2e2e2;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.ReservationItem .status_img_wrapper {
+  cursor: pointer;
+  min-width: 100px;
+  height: 60px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.ReservationItem .info_wrapper {
+  flex-grow: 1;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.ReservationItem .reservation_date {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.ReservationItem .reservation_content_review {
+  font-size: 18px;
+}
+
+.ReservationItem .btn_wrapper {
+  min-width: 70px;
+}
+
+/* BizItem */
+
+.BizItem {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #e2e2e2;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.BizItem .biz_snoopy_logo_wrapper {
+  cursor: pointer;
+  min-width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.BizItem .info_wrapper {
+  flex-grow: 1;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.BizItem .reservation_date {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.BizItem .reservation_content_review {
+  font-size: 18px;
+}
+
+.BizItem .btn_wrapper {
+  min-width: 70px;
+}
+
+.MyBizList .btn_reload {
+  margin-top: 20px;
+}
+
+/* Pay styling */
+
+.pay .biz_info {
+  display: flex;
+  align-items: center;
+}
+.pay .biz_info_wrapper {
+  background-image: url(./snoopyGolf3.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  border: 1px solid rgb(177, 201, 128);
+  border-radius: 10px;
+
+  padding-left: 10px;
+
+  margin-top: 10px;
+
+  font-size: 25px;
+}
+
+.pay .biz_info_title .title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.pay .btn_pay_wrapper {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* PaymentNoti styling */
+.MyMessage {
+  background-image: url(./snoopyGolf4.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  border: 1px solid rgb(177, 201, 128);
+  border-radius: 10px;
+
+  padding-left: 10px;
+
+  margin-top: 10px;
+
+  font-size: 25px;
+
+  background-size: 25%;
+}
+.btn_paymentnoti {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.MyMessage .message_title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: #64c964;
+}
+
+.MyMessage .message_content {
+  margin-bottom: 150px;
+}
+
+.login_input_wrapper {
+  background-image: url(./snoopyGolf3.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  border: 1px solid rgb(177, 201, 128);
+  border-radius: 10px;
+
+  padding-left: 10px;
+  padding-bottom: 200px;
+
+  margin-top: 50px;
+
+  font-size: 25px;
+}
+
+.login_input_wrapper .login_input_title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.login_input_wrapper .input_row {
+  display: flex;
+  justify-content: center;
+}
+.login_input_wrapper .input_row .id {
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login_input_wrapper .input_row .pw {
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  margin-bottom: 20px;
+}
+
+/* user_group_change */
+.user_group_change {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 10px;
+}
+
+.user_group_change .MyButton_default {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* tb_member_create_form */
+.user_info_edit_wrapper {
+  background-image: url(./snoopyGolf4.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  border: 1px solid rgb(177, 201, 128);
+  border-radius: 10px;
+
+  padding-left: 10px;
+  padding-bottom: 20px;
+
+  margin-top: 50px;
+
+  font-size: 25px;
+}
+
+.tb_member_create_form {
+  margin-top: 50px;
+}
+
+.tb_member_create_form .form_th {
+  width: 170px;
+  text-align: left;
+  font-size: x-large;
+}
+.tb_member_create_form .form_td .input_field {
+  height: 30px;
+  width: 240px;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  margin-bottom: 5px;
+}
+.mandatory_mark {
+  color: #fd565f;
+}
+.btn_save {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.user_info_edit_wrapper .MyButton_positive {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* 경매 정보 */
+.bidding_info_body {
+  background-image: url(./snoopyGolf4.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  border: 1px solid rgb(177, 201, 128);
+  border-radius: 10px;
+
+  padding-left: 10px;
+  padding-bottom: 20px;
+
+  margin-top: 50px;
+
+  font-size: 25px;
+}
+.bidding_info_body .tb_bidding_info_detail_form {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.bidding_info_body .tb_bidding_info_detail_form .form_th {
+  text-align: left;
+  width: 100px;
+  height: 40px;
+  font-size: x-large;
+}
+
+.bidding_info_body .bid_amount {
+  display: flex;
+  justify-content: center;
+}
+
+.bidding_info_body .bid_amount .bid_amount_input {
+  border: none;
+}
+
+.bidding_info_body .bid_btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.bidding_info_body .bid_btn .MyButton_negative {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.bidding_info_body .bid_btn .MyButton_positive {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.bidding_biz_info_list_body_wrapper {
+  background-image: url(./snoopyGolf4.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  border: 1px solid rgb(177, 201, 128);
+  border-radius: 10px;
+
+  padding-left: 10px;
+  padding-bottom: 20px;
+
+  margin-top: 50px;
+
+  font-size: 15px;
+  height: 600px;
+}
+.bidding_biz_info_list_body_wrapper input {
+  border-radius: 5px;
+  border-color: rgb(182, 130, 66);
+  width: 120px;
+}
+.bidding_biz_info_list_body_wrapper table {
+  border-spacing: 5px;
+}
+
+.bidding_biz_info_list_body_wrapper .tb_search_condition {
+  font-size: 20px;
+}
+
+.search_condition_wrapper .table_line {
+  border: 1px solid rgb(177, 201, 128);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 620px;
+}
+
+.search_condition_wrapper .tb_search_condition {
+  display: flex;
+  justify-content: left;
+}
+.search_condition_wrapper .tb_search_condition .MyButton_negative {
+  margin-top: 8px;
+  padding-top: 0px;
+  height: 23px;
+}
+
+.bidding_biz_list_wrapper table {
+  width: 630px;
+  text-align: center;
+  font: 20px;
+}
+.bidding_biz_list_wrapper thead {
+  width: 630px;
+  font-size: 20px;
+}
