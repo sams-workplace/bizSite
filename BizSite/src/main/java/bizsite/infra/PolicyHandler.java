@@ -2,10 +2,10 @@ package bizsite.infra;
 
 import bizsite.config.kafka.KafkaProcessor;
 import bizsite.domain.*;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import javax.naming.NameParser;
-import javax.naming.NameParser;
+import bizsite.domain.Bidding.GameReservation;
+import bizsite.domain.Bidding.ReservationConfirmed;
+import bizsite.domain.Bidding.ReservationRequested;
+
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.StreamListener;
@@ -22,37 +22,36 @@ public class PolicyHandler {
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
 
+    // 경매요청 내역 수신
     @StreamListener(KafkaProcessor.INPUT)
-    public void wheneverRequestApproved_ApproveRegist(
-        @Payload RequestApproved requestApproved
+    public void wheneverReservationRequested_ApproveRegist(
+        @Payload ReservationRequested reservationRequested
     ) {
-        if (!requestApproved.validate()) return;
-        RequestApproved event = requestApproved;
+        if (!reservationRequested.validate()) return;
+        ReservationRequested event = reservationRequested;
         System.out.println(
-            "\n\n##### listener ApproveRegist : " +
-            requestApproved.toJson() +
+            "\n\n##### listener ReservationRequested : \n" +
+            reservationRequested.toJson() +
             "\n\n"
         );
 
-        // Sample Logic //
-        BizSiteMng.approveRegist(event);
+        GameReservation.approveRegist(event);
     }
 
+    // 경매결과 수신
     @StreamListener(KafkaProcessor.INPUT)
-    public void wheneverRequestCanceled_ApproveRemove(
-        @Payload RequestCanceled requestCanceled
+    public void wheneverReservationCinfirmed_ApproveUpdate(
+        @Payload ReservationConfirmed reservationConfirmed
     ) {
-        if (!requestCanceled.validate()) return;
-        RequestCanceled event = requestCanceled;
+        if (!reservationConfirmed.validate()) return;
+        ReservationConfirmed event = reservationConfirmed;
         System.out.println(
             "\n\n##### listener ApproveRemove : " +
-            requestCanceled.toJson() +
+            reservationConfirmed.toJson() +
             "\n\n"
         );
 
-        // Sample Logic //
-        BizSiteMng.approveRemove(event);
+        GameReservation.approveUpdate(event);
     }
-    // keep
 
 }

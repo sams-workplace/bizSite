@@ -23,6 +23,7 @@ public class RequestCanceled extends AbstractEvent {
     private String authProcNm;
     private String authProcDttm;
     private Long bizSiteRequestId;
+    private Long requestId;
 
     public RequestCanceled(BizSiteMng aggregate) {
         super(aggregate);
@@ -32,7 +33,7 @@ public class RequestCanceled extends AbstractEvent {
         super();
     }
 
-    
+
     public Long getId() {
         return id;
     }
@@ -151,5 +152,12 @@ public class RequestCanceled extends AbstractEvent {
 
     public void setBizSiteRequestId(Long bizSiteRequestId) {
         this.bizSiteRequestId = bizSiteRequestId;
+    }
+
+    public Long getRequestId() {
+        return this.requestId;
+    }
+    public void setRequestId(Long requestId) {
+        this.requestId = requestId;
     }
 }

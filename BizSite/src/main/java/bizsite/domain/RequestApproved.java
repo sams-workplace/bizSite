@@ -23,6 +23,7 @@ public class RequestApproved extends AbstractEvent {
     private String authProcNm;
     private String authProcDttm;
     private Long bizSiteRequestId;
+    private Long requestId;
 
     public RequestApproved(BizSiteMng aggregate) {
         super(aggregate);
@@ -150,6 +151,14 @@ public class RequestApproved extends AbstractEvent {
 
     public void setBizSiteRequestId(Long bizSiteRequestId) {
         this.bizSiteRequestId = bizSiteRequestId;
+    }
+
+
+    public Long getRequestId() {
+        return this.requestId;
+    }
+    public void setRequestId(Long requestId) {
+        this.requestId = requestId;
     }
 
 }

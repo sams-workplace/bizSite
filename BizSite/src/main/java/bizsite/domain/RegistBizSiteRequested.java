@@ -8,14 +8,18 @@ public class RegistBizSiteRequested extends AbstractEvent {
 
     private Long id;
     private String bizSiteName;
+    private String bizSiteNo;
     private String bizSiteId;
     private String bizSitePassword;
     private String bizSiteLocation;
     private String bizSitePhoneNum;
     private String settleAccountNo;
     private String status;
-    private Long bizSiteRequestId;
-    
+    // 필드추가
+    private String delFlag;
+    private String statusDesc;
+    private String stateChngDttm;
+
     public RegistBizSiteRequested(BizSiteMng aggregate) {
         super(aggregate);
     }
@@ -24,13 +28,11 @@ public class RegistBizSiteRequested extends AbstractEvent {
         super();
     }
 
-
     public Long getId() {
-        return id;
+    	return this.id;
     }
-
     public void setId(Long id) {
-        this.id = id;
+    	this.id = id;
     }
 
     public String getBizSiteName() {
@@ -39,6 +41,13 @@ public class RegistBizSiteRequested extends AbstractEvent {
 
     public void setBizSiteName(String bizSiteName) {
         this.bizSiteName = bizSiteName;
+    }
+
+    public String getBizSiteNo() {
+        return this.bizSiteNo;
+    }
+    public void setBizSiteNo(String bizSiteNo) {
+        this.bizSiteNo = bizSiteNo;
     }
 
     public String getBizSiteId() {
@@ -89,13 +98,27 @@ public class RegistBizSiteRequested extends AbstractEvent {
         this.status = status;
     }
 
-    public Long getBizSiteRequestId() {
-        return bizSiteRequestId;
+    public String getDelFlag() {
+        return delFlag;
     }
 
-    public void setBizSiteRequestId(Long bizSiteRequestId) {
-        this.bizSiteRequestId = bizSiteRequestId;
+    public void setDelFlag(String delFlag) {
+        this.delFlag = delFlag;
     }
 
+    public String getStatusDesc() {
+        return statusDesc;
+    }
 
+    public void setStatusDesc(String statusDesc) {
+        this.statusDesc = statusDesc;
+    }
+
+    public String getStateChngDttm() {
+        return stateChngDttm;
+    }
+
+    public void setStateChngDttm(String stateChngDttm) {
+        this.stateChngDttm = stateChngDttm;
+    }
 }

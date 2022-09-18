@@ -59,11 +59,11 @@ spring:
                   serde: org.apache.kafka.common.serialization.Serdes$StringSerde
       bindings:
         event-in:
-          group: BizSite
-          destination: bizsite
+          group: Scrumble
+          destination: scrumble
           contentType: application/json
         event-out:
-          destination: bizsite
+          destination: scrumble
           contentType: application/json
 
 
