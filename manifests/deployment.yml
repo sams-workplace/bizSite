@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: samsworkplacebizsite 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: samsworkplacebizsite
+  template:
+    metadata:
+      labels:
+        app: samsworkplacebizsite 
+    spec:
+      containers:
+        - name: samsworkplacebizsite 
+          image: bizsiteacr.azurecr.io/samsworkplacebizsite
+          ports:
+          - containerPort: 8080
